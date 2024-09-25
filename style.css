@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+body {
+    background-color: #010302;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    overflow-x: hidden;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+.container {
+    overflow: hidden;
+    height: max-content;
+}
+
+.banner {
+    height: 50vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner .bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: center bottom;
+    transition: 0.1s;
+}
+
+.banner .bg:nth-child(1) {
+    background-image: url(images/banner_0.png);
+}
+
+.banner .bg:nth-child(2) {
+    background-image: url(images/banner_1.png);
+}
+
+.banner .bg:nth-child(3) {
+    top: 32%;
+    text-align: center;
+}
+
+.banner .bg:nth-child(3) h1,
+.banner .bg:nth-child(3) h5 {
+    color: #d1c3ae;
+    font-size: 50px;
+    margin: 0;
+    text-shadow: 0 0px 20px #d2af76;
+}
+
+.banner .bg:nth-child(3) h1 {
+    font-size: 11vw;
+}
+
+.banner .bg:nth-child(4) {
+    background-image: url(images/banner_2.png);
+}
+
+.banner .bg:nth-child(5) {
+    background-image: url(images/banner_3.png);
+}
+
+.tab {
+    min-height: 100vh;
+    background-color: #010302;
+    z-index: 1;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab::before {
+    position: absolute;
+    height: 200px;
+    width: 100vw;
+    background: linear-gradient( to top, #010302, transparent);
+    content: '';
+    bottom: 100%;
+    left: 0;
+}
+
+.tab.tab1 {
+    background: linear-gradient( to top, #010302 0%, transparent 20%, #010302 80%), url(images/tab1.png);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.tab.tab2 {
+    background: linear-gradient( to top, #010302 0%, transparent 20%, #010302 80%), url(images/tab2.png);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.tab.tab1 .content {
+    width: 700px;
+    max-width: 90%;
+    color: #eee;
+}
+
+.tab.tab2 .content {
+    color: #eee;
+    width: 900px;
+    max-width: 90%;
+}
+
+.tab.tab2 .content .des {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.event {
+    flex: 1 0 calc(25% - 20px);
+    /* 4 items per row */
+    background-color: #f0f0f0;
+    /* Card background */
+    border-radius: 10px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Clip overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow for card effect */
+    margin: 10px 0;
+    /* Vertical spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transition for hover effect */
+}
+
+.event:hover {
+    transform: scale(1.05);
+    /* Slightly scale up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Increase shadow depth */
+}
+
+.event-image {
+    height: 200px;
+    /* Set height */
+    background-size: cover;
+    /* Cover the area */
+    background-position: center;
+    /* Center the image */
+    transition: filter 0.3s ease;
+    /* Transition for image effect */
+}
+
+.event:hover .event-image {
+    filter: brightness(90%);
+    /* Darken the image slightly on hover */
+}
+
+.event-info {
+    padding: 10px;
+    /* Space around text */
+}
+
+.event-title {
+    font-size: 16px;
+    /* Title size */
+    font-weight: bold;
+    /* Bold title */
+    margin-bottom: 5px;
+    /* Spacing below title */
+}
+
+.event-date,
+.event-location {
+    font-size: 12px;
+    /* Date and location size */
+    color: #666;
+    /* Date and location color */
+}
+
+.stylish-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #6a5acd, #00bfff);
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.stylish-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    z-index: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.stylish-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.stylish-button:hover {
+    color: #6a5acd;
+    /* Change text color on hover */
+}
+
+.stylish-button:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* Increase shadow on hover */
+}
+
+.stylish-button:focus {
+    outline: none;
+    /* Remove outline */
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: right;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.139);
+    /* Transparent black */
+    padding: 15px;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 2px solid #2980b9;
+    /* Added a border with a nice color */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    /* Added transform transition */
+    font-size: 16px;
+    /* Increased font size */
+    font-weight: bold;
+    /* Bold text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.nav-button:hover {
+    background-color: #2980b9;
+    /* Change background on hover */
+    color: #ffffff;
+    /* Change text color on hover */
+    transform: translateY(-2px);
+    /* Slight lift on hover */
+}
+
+.nav-button:active {
+    transform: translateY(0);
+    /* Return to original position on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Deeper shadow on click */
+}
