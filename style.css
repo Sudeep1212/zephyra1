@@ -82,15 +82,14 @@ body {
     position: absolute;
     height: 200px;
     width: 100vw;
-    background: linear-gradient( to top, #010302, transparent);
+    background: linear-gradient(to top, #010302, transparent);
     content: '';
     bottom: 100%;
     left: 0;
 }
 
 .tab.tab1 {
-    background: linear-gradient( to top, #010302 0%, transparent 20%, #010302 80%), url(images/tab1.png);
-    /* background-repeat: no-repeat; */
+    background: linear-gradient(to top, #010302 0%, transparent 20%, #010302 80%), url(images/tab1.png);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -98,8 +97,7 @@ body {
 }
 
 .tab.tab2 {
-    background: linear-gradient( to top, #010302 0%, transparent 20%, #010302 80%), url(images/tab2.png);
-    /* background-repeat: no-repeat; */
+    background: linear-gradient(to top, #010302 0%, transparent 20%, #010302 80%), url(images/tab2.png);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -126,64 +124,45 @@ body {
 
 .event {
     flex: 1 0 calc(25% - 20px);
-    /* 4 items per row */
     background-color: #f0f0f0;
-    /* Card background */
     border-radius: 10px;
-    /* Rounded corners */
     overflow: hidden;
-    /* Clip overflow */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Shadow for card effect */
     margin: 10px 0;
-    /* Vertical spacing */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Transition for hover effect */
 }
 
 .event:hover {
     transform: scale(1.05);
-    /* Slightly scale up on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Increase shadow depth */
 }
 
 .event-image {
     height: 200px;
-    /* Set height */
     background-size: cover;
-    /* Cover the area */
     background-position: center;
-    /* Center the image */
     transition: filter 0.3s ease;
-    /* Transition for image effect */
 }
 
 .event:hover .event-image {
     filter: brightness(90%);
-    /* Darken the image slightly on hover */
 }
 
 .event-info {
     padding: 10px;
-    /* Space around text */
 }
 
 .event-title {
     font-size: 16px;
-    /* Title size */
     font-weight: bold;
-    /* Bold title */
     margin-bottom: 5px;
-    /* Spacing below title */
+    color: black;
 }
 
 .event-date,
 .event-location {
     font-size: 12px;
-    /* Date and location size */
     color: #666;
-    /* Date and location color */
 }
 
 .stylish-button {
@@ -224,29 +203,26 @@ body {
 
 .stylish-button:hover {
     color: #6a5acd;
-    /* Change text color on hover */
 }
 
 .stylish-button:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    /* Increase shadow on hover */
 }
 
 .stylish-button:focus {
     outline: none;
-    /* Remove outline */
 }
 
 .nav-bar {
     display: flex;
     justify-content: right;
-    padding: 20px 0;
+    padding: 15px;
+    /* Adjusted for consistency */
     position: sticky;
     top: 0;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.139);
     /* Transparent black */
-    padding: 15px;
 }
 
 .nav-button {
@@ -259,7 +235,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    /* Added transform transition */
+    /* Smooth transition */
     font-size: 16px;
     /* Increased font size */
     font-weight: bold;
